@@ -3,7 +3,7 @@
  * @see https://v0.dev/t/rAxAcYNJolg
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-// eslint-disable react/no-unescaped-entities 
+eslint-disable react/no-unescaped-entities 
 
 import Link from "next/link"
 import { Label } from "@/components/ui/label"
