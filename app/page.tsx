@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
+
 export default function Home() {
   return (
     <main className="flex flex-col gap-12 md:gap-20">
@@ -16,6 +17,8 @@ export default function Home() {
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                     Eunseong Lee
+                    <br />
+                    
                   </h1><br></br>
                   <p className="text-gray-500 md:text-xl dark:text-gray-400">
                     Game Designer
