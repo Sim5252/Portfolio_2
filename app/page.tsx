@@ -21,10 +21,10 @@ export default function Home() {
                     
                   </h1><br></br>
                   <p className="text-gray-500 md:text-xl dark:text-gray-400">
-                    Game Designer
+                  게임 기획자
                   </p>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                    게임 기획자
+                  Game Designer
                   </p>
                 </div>
               </div>
@@ -43,10 +43,10 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="space-y-3">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Projects
+            프로젝트
             </h2><br></br>
             <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              프로젝트
+              Projects
             </p><br></br>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
