@@ -131,10 +131,10 @@ export default function Home() {
           <div className="grid items-center justify-center gap-4 text-center">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-                Get in Touch
+              연락처
               </h2>
               <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                연락처
+                Get in Touch
               </p>
             </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
