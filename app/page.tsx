@@ -65,7 +65,7 @@ export default function Home() {
                 alt="Project 2"
                 className="mb-4 aspect-[4/3] w-full rounded-md object-cover"
                 height="300"
-                src="/game2.png"
+                src="/game2.PNG"
                 width="400"
               />
               <h3 className="text-lg font-semibold">벤딩타(Vendingtta)</h3>
