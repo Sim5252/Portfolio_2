@@ -16,7 +16,7 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                    Eunseong Lee
+                    이은성
                     <br />
                     
                   </h1><br></br>
