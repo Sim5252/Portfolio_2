@@ -4,17 +4,52 @@ import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import Link from "next/link"
+import { Label } from "@/components/ui/label";
+import { JSX, SVGProps } from "react";
+import { useState } from 'react';
+import {
+  CardTitle,
+  CardDescription,
+  CardContent,
+  Card,
+} from "@/components/ui/card";
 
 
 export default function Home() {
-  return (
-    <main className="flex flex-col gap-12 md:gap-20">
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-200">
+  return (    
+  <div className="flex flex-col min-h-screen">
+    <header className="bg-black text-white py-4 px-6 md:px-10 flex items-center justify-between sticky top-0 z-50">
+     <Link className="text-2xl font-bold" href="#">
+       이은성 포트폴리오
+     </Link>
+     <nav className="hidden md:flex items-center space-x-6">
+       <Link className="hover:underline" href="#home">
+         홈
+       </Link>
+       <Link className="hover:underline" href="#projects">
+         작업물
+       </Link>
+       <Link className="hover:underline" href="#about">
+         소개
+       </Link>
+       <Link className="hover:underline" href="#contact">
+         연락처
+       </Link>
+     </nav>
+     <Button className="md:hidden" variant="outline">
+       <MenuIcon className="h-6 w-6" />
+     </Button>
+   </header>
+   <main className="flex flex-col gap-12 md:gap-20" >
+      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-bule-200" id="home">
+      
         <div className="flex justify-center">
           <div className="container px-4 md:px-6">
             <div className="grid items-center gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
+                  
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                     이은성
                     <br />
@@ -39,7 +74,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full py-12 md:py-24 lg:py-32 flex justify-center ">
+      
+      <section className="w-full py-12 md:py-24 bg-gray-100 lg:py-32 flex  justify-center "id="projects">
         <div className="container px-4 md:px-6">
           <div className="space-y-3">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -93,7 +129,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 flex justify-center">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-white-100 dark:bg-white-800 flex justify-center "id="about">
         <div className="container px-4 md:px-6">
           <div className="grid items-center gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
             <div className="flex flex-col justify-center space-y-4">
@@ -126,29 +162,75 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 flex justify-center">
-        <div className="container px-4 md:px-6">
-          <div className="grid items-center justify-center gap-4 text-center">
-            <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              연락처
-              </h2>
-              <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Get in Touch
-              </p>
+      <section
+        className="bg-gray-100 dark:bg-white-800 py-12 md:py-24"
+        id="contact"
+      >
+        <div className="container mx-auto px-6 md:px-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8">문의</h2>
+          <form className="max-w-md mx-auto" >
+            <div className="mb-4">
+              <label
+                className="block text-gray-700 dark:text-gray-300 font-medium mb-2"
+                htmlFor="name"
+              >
+                이름
+              </label>
+              <Input id="name" placeholder="이름을 입력해주세요" type="text" />
             </div>
-            <div className="mx-auto w-full max-w-sm space-y-2">
-              <form className="grid gap-4">
-                <input placeholder="Name" type="text" className="input-class border rounded p-2" />
-                <input placeholder="Email" type="email" className="input-class border rounded p-2" />
-                <textarea placeholder="Message" rows={4} className="textarea-class border rounded p-2"></textarea>
-                <button type="submit" className="button-class bg-blue-500 text-white rounded p-2">Send Message</button>
-            
-              </form>
+            <div className="mb-4">
+              <label
+                className="block text-gray-700 dark:text-gray-300 font-medium mb-2"
+                htmlFor="email"
+              >
+                이메일
+              </label>
+              <Input id="email" placeholder="이메일을 입력해주세요" type="email" />
             </div>
-          </div>
+            <div className="mb-4">
+              <label
+                className="block text-gray-700 dark:text-gray-300 font-medium mb-2"
+                htmlFor="message"
+              >
+                문의
+              </label>
+              <Textarea
+                id="message"
+                placeholder="문의 내용을 입력해주세요"
+                rows={5}
+              />
+            </div>
+            <Button className="w-full cursor-x" type="button" variant="outline">
+              메시지 보내기
+            </Button>
+          </form>
         </div>
       </section>
+    
     </main>
+    </div>
   );
+}
+ 
+  
+
+function MenuIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="4" x2="20" y1="12" y2="12" />
+      <line x1="4" x2="20" y1="6" y2="6" />
+      <line x1="4" x2="20" y1="18" y2="18" />
+    </svg>
+  )
 }
